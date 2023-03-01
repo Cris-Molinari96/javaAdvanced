@@ -87,6 +87,8 @@ public class Main {
 
         for (Integer number : numbers) {
             // Your code
+            max = Collections.max(numbers);
+            min = Collections.min(numbers);
         }
 
         if (max != 10 || min != 1) {
