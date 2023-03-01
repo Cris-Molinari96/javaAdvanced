@@ -131,6 +131,9 @@ public class Main {
         // Your code
 
         for (Integer orderedNumber:orderedNumbers) {
+            // or -->
+            // min = Collection.min(orderedNumbers);
+
             if(min >= Collections.min(orderedNumbers)){
                 min = orderedNumber;
                 break;
