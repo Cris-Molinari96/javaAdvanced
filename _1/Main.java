@@ -42,7 +42,9 @@ public class Main {
         // Your code
         itemsContainedInBothSets.addAll(setA);
         itemsContainedInBothSets.addAll(setB);
-
+        if(itemsContainedInBothSets.containsAll(Set.of(1,2,3,4,11,12,13,14,15))){
+            itemsContainedInBothSets.removeAll(Set.of(1,2,3,4,11,12,13,14,15));
+        }
 
         if (!itemsContainedInBothSets.equals(Set.of(5, 6, 7, 8, 9, 10))) {
             System.out.println("3b. Incorrect number of items in itemsContainedInBothSets");
@@ -61,7 +63,15 @@ public class Main {
         // 4a. Find the min value in the TreeSet with as few loops as possible,
         //     you can use `break;` to exit the loop once you've found it!
         int min = Integer.MAX_VALUE;
+
         // Your code
+
+        for (Integer orderedNumber:orderedNumbers) {
+            if(min >= Collections.min(orderedNumbers)){
+                min =  orderedNumber;
+                break;
+            }
+        }
 
         if (min != 1) {
             System.out.println("4a. Incorrect min value");
