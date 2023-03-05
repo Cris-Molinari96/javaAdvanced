@@ -20,7 +20,8 @@ public class Main {
         List<String> list = new ArrayList<>(Arrays.asList("a", "b", "c", "a", "b", "c", "a", "b", "c"));
 
         // Your code here
-        list = new ArrayList<>(new HashSet<>(list));
+        Set <String> set = new HashSet<>(list); // --> oppure gli potevo anche passare un set
+        list = new ArrayList<>(new HashSet<>(list)); // set al posto d list
 
         if (list.size() == 3) {
             System.out.println("Exercise 1: Success");
