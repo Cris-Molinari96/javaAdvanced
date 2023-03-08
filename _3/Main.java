@@ -63,18 +63,17 @@ public class Main {
         // and store the counts in the Map `wordCount`, note you will need to first get the previous value
         // from the Map and then increment it by 1, if no previous value exists, use 0 as the previous value.
 
-        // Your code here
-
-        System.out.println(words.stream().count());
-        wordCount.put(str, 14);
-        wordCount.put(str, null);
-
-        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
-            int count = 0;
-            if(wordCount.containsValue(entry.getValue())){
-                wordCount.put(str, ++count);
-            };
+        for (String word : words) {
+        int number = 0;
+            for (String w : words) {
+                if(w.strip() == word.strip()){
+                    number++;
+                }
+            }
+                wordCount.put(word,number);
         }
+        System.out.println(wordCount);
+
     }
 
     /**
