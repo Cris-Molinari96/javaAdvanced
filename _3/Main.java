@@ -67,7 +67,7 @@ public class Main {
         int number = 0;
             for (String w : words) {
                 if(w.strip().equals(word.strip())){
-                    number = number + 1;
+                    number += 1;
                 }
             }
                 wordCount.put(word,number);
